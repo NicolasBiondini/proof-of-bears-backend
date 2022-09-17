@@ -3,6 +3,7 @@ import cors from "cors";
 import mongoose, { ConnectOptions } from "mongoose";
 
 import { PORT, MONGO_URL } from "./config/config";
+import { postRouter } from "./routes/post";
 
 class Server {
   app: Express;
@@ -44,6 +45,7 @@ class Server {
         ],
       });
     });
+    this.app.use(postRouter);
   }
 
   // Create a method to start the server.
