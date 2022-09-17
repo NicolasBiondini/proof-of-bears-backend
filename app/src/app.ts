@@ -32,7 +32,11 @@ class Server {
   middlewares() {
     this.app.use(express.json());
     // CORS added
-    this.app.use(cors());
+    this.app.use(
+      cors({
+        origin: "*",
+      })
+    );
   }
 
   // Create a method to use the different routes of the app.
