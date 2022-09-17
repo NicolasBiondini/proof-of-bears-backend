@@ -1,12 +1,18 @@
 import { Document, Model } from "mongoose";
 
 export interface post {
+  profileID: string;
+  postLensID: string;
+  section: string;
   title: string;
   price: number;
   image: string;
 }
 
 export interface postDoc extends Document {
+  profileID: string;
+  postLensID: string;
+  section: string;
   title: string;
   price: number;
   image: string;

@@ -4,7 +4,6 @@ import { Post } from "../../db/models/post.schema";
 export const getPosts = async (req: Request, res: Response) => {
   try {
     const posts = await Post.find({});
-    console.log(posts);
     return res.status(200).json({ message: "All Correct", data: posts });
   } catch (error) {
     console.log(error);
