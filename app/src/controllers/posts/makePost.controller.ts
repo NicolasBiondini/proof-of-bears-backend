@@ -2,8 +2,8 @@ import { Request, Response } from "express";
 import { Post } from "../../db/models/post.schema";
 
 export const makePost = async (req: Request, res: Response) => {
+  console.log(req.body);
   try {
-    console.log(req.body);
     if (
       !req.body.title ||
       !req.body.price ||

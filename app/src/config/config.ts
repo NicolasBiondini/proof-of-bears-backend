@@ -2,4 +2,4 @@ import dotenv from "dotenv";
 
 dotenv.config();
 export const PORT = process.env.NODE_LOCAL_PORT || 4000;
-export const MONGO_URL = "mongodb://localhost:27017/bears";
+export const MONGO_URL = "mongodb+srv://proof_of_bears:proof_of_bears@cluster0.usfm3jr.mongodb.net/?retryWrites=true&w=majority";
