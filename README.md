@@ -1,3 +1,9 @@
+JUST RUN:
+docker-compose build
+docker-compose up
+WORKING
+
+DEV:
 MONGO DB:
 
 docker-compose up

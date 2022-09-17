@@ -1,6 +1,13 @@
 version: "3.1"
 
 services:
+  node:
+    restart: always
+    build: ./app/
+    ports:
+      - 80:4000
+    volumes:
+      - ./:/code
   db:
     container_name: mongoDB2
     image: mongo:latest
@@ -11,3 +18,5 @@ services:
       - MONGO_INITDB_DATABASE=bears
     ports:
       - 27017:27017
+volumes:
+  bears:
