@@ -8,6 +8,7 @@ const PostSchema = new Schema({
   title: { type: String, required: [true, "Field is required"] },
   price: { type: Number, required: [true, "Field is required"] },
   image: { type: String, required: [true, "Field is required"] },
+  description: { type: String, required: [true, "Field is required"] }
 });
 
 PostSchema.statics.build = (obj: post) => {

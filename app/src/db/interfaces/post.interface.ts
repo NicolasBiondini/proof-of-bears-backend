@@ -7,6 +7,7 @@ export interface post {
   title: string;
   price: number;
   image: string;
+  description: string;
 }
 
 export interface postDoc extends Document {
@@ -16,6 +17,7 @@ export interface postDoc extends Document {
   title: string;
   price: number;
   image: string;
+  description: string;
 }
 
 export interface PostModelInterface extends Model<postDoc> {

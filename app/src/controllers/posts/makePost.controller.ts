@@ -10,7 +10,8 @@ export const makePost = async (req: Request, res: Response) => {
       !req.body.image ||
       !req.body.profileID ||
       !req.body.postLensID ||
-      !req.body.section
+      !req.body.section ||
+      !req.body.description
     )
       return res.status(404).json({ message: "Bad Request", data: [] });
     const post = Post.build({
@@ -20,6 +21,7 @@ export const makePost = async (req: Request, res: Response) => {
       title: req.body.title,
       price: req.body.price,
       image: req.body.image,
+      description: req.body.description
     });
     await post.save();
     return res.status(201).json({ message: "All Correct", data: [post] });
